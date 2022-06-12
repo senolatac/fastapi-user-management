@@ -1,0 +1,17 @@
+version: 2.1
+
+orbs:
+  sha-python-deploy: sha-python/sha-python-deploy@0.0.1
+
+workflows:
+  main: # This is the name of the workflow, feel free to change it to better match your workflow.
+    # Inside the workflow, you define the jobs you want to run.
+    jobs:
+      - sha-python-deploy/build-and-test
+      - sha-python-deploy/coverage:
+          codacy_project_token: $CODACY_PROJECT_TOKEN
+          requires:
+            - sha-python-deploy/build-and-test
+          filters:
+            branches:
+              only: master
