@@ -13,7 +13,7 @@ def test_get_all_users_forbidden(authorized_client_user):
 
 
 def test_get_all_users_jwt_error(client):
-    client.headers["Authorization"] = f"Bearer random"
+    client.headers["Authorization"] = "Bearer random"
     response = client.get("/admin/all-users")
 
     assert response.status_code == 401

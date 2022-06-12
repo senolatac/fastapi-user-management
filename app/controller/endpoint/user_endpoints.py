@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, Path
 from pydantic import Required
 from sqlalchemy.orm import Session
 
-from app.dependency.database import get_db
+from app.config.database import get_db
 from app.model.role import Role
 from app.security.jwt_provider import get_authentication
 from app.security.user_principle import UserPrinciple
