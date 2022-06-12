@@ -1,1 +1,1 @@
-"""Folder init"""
+"""Return the pathname of the service directory."""

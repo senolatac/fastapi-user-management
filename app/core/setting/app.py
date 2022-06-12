@@ -21,7 +21,7 @@ class AppSettings(BaseAppSettings):
 
     database_url: str = "mysql://admin:1234@localhost:3306/db_user"
 
-    jwt_secret_key: str = "random-string-key-securerandom-string-key-securerandom-string-key-securerandom-string-key-secure"
+    jwt_secret_key: str = "random-string-key-secure-key"
 
     class Config:
         validate_assignment = True

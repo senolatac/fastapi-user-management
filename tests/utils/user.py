@@ -1,5 +1,4 @@
 import json
-import random
 
 from fastapi.testclient import TestClient
 
@@ -21,8 +20,8 @@ def update_user_role_as_admin(client: TestClient):
 
 
 def authentication_token_for_user(client: TestClient):
-    username = "testU" + str(random.randint(0, 1000))
-    password = "testU" + str(random.randint(0, 1000))
+    username = "testUser"
+    password = "testUser"
 
     create_user(client, username, password)
 
@@ -30,8 +29,8 @@ def authentication_token_for_user(client: TestClient):
 
 
 def authentication_token_for_admin(client: TestClient):
-    username = "testA" + str(random.randint(0, 1000))
-    password = "testA" + str(random.randint(0, 1000))
+    username = "testAdmin"
+    password = "testAdmin"
 
     create_user(client, username, password)
 
@@ -45,5 +44,3 @@ def authentication_token_for_admin(client: TestClient):
     update_user_role_as_admin(client)
 
     return user_authentication_headers(client, username, password)
-
-
