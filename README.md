@@ -1,7 +1,9 @@
 # fastapi-user service
 User service with python-fastapi
 
+[![CircleCI](https://circleci.com/gh/senolatac/fastapi-user-management/tree/master.svg?style=svg)](https://circleci.com/gh/senolatac/fastapi-user-management/tree/master)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0bd67820567942cfa10336c3c0e65a88)](https://www.codacy.com/gh/senolatac/fastapi-user-management/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=senolatac/fastapi-user-management&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/0bd67820567942cfa10336c3c0e65a88)](https://www.codacy.com/gh/senolatac/fastapi-user-management/dashboard?utm_source=github.com&utm_medium=referral&utm_content=senolatac/fastapi-user-management&utm_campaign=Badge_Coverage)
 
 ### Install dependencies and run server
 Dependencies are managed by  [poetry](https://python-poetry.org/)
