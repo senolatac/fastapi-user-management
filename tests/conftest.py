@@ -8,10 +8,6 @@ from fastapi.testclient import TestClient
 
 from tests.utils.user import authentication_token_for_user, authentication_token_for_admin
 
-TEST_ENV_VARS = {
-    'ENV': 'test'
-}
-
 os.environ["APP_ENV"] = "test"
 
 
@@ -50,15 +46,3 @@ def authorized_client_admin(client: TestClient) -> TestClient:
     jwt = authentication_token_for_admin(client)
     client.headers["Authorization"] = f"Bearer {jwt}"
     return client
-
-
-@pytest.fixture
-def tests_setup_and_teardown():
-    # Will be executed before the first test
-    old_environ = dict(os.environ)
-    os.environ.update(TEST_ENV_VARS)
-
-    yield
-    # Will be executed after the last test
-    os.environ.clear()
-    os.environ.update(old_environ)

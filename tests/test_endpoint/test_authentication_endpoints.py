@@ -29,6 +29,28 @@ def test_sign_in(client):
     assert response.json()["username"] == "test"
 
 
+def test_sign_in_wrong_username(client):
+    data = {
+        "username": "test1",
+        "password": "test",
+    }
+
+    response = client.post("/authentication/sign-in", json.dumps(data))
+
+    assert response.status_code == 401
+
+
+def test_sign_in_wrong_password(client):
+    data = {
+        "username": "test",
+        "password": "test1",
+    }
+
+    response = client.post("/authentication/sign-in", json.dumps(data))
+
+    assert response.status_code == 401
+
+
 def test_login_for_access_token(client):
     data = {
         "username": "test",

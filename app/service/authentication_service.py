@@ -14,10 +14,6 @@ def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
 
 
-def get_password_hash(password):
-    return pwd_context.hash(password)
-
-
 def authenticate_user(db: Session, sign_in_request: UserBase):
     user = user_service.find_by_username(db, sign_in_request.username)
     if not user:

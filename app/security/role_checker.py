@@ -8,8 +8,8 @@ from app.security.user_principle import UserPrinciple
 
 
 class RoleChecker:
-    
     """constructor => roleChecker = RoleChecker([])"""
+
     def __init__(self, allowed_roles: List):
         """
 
