@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  sha-python-deploy: sha-python/sha-python-poetry@0.0.1
+  sha-python-poetry: sha-python/sha-python-poetry@0.0.1
 
 workflows:
   main: # This is the name of the workflow, feel free to change it to better match your workflow.
