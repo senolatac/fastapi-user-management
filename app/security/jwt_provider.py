@@ -11,7 +11,7 @@ SETTINGS = get_app_settings()
 
 SECRET_KEY = SETTINGS.jwt_secret_key
 ALGORITHM = "HS512"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+ACCESS_TOKEN_EXPIRE_MINUTES = SETTINGS.jwt_expire_minutes
 
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="authentication/token")
